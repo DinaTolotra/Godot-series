@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bes00m8voqnsn"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/warrior.gd" id="1_t85ht"]
+[ext_resource type="SpriteFrames" uid="uid://jr56m3g8sw3s" path="res://Ressources/Characters/warrior_sprite_frames.tres" id="1_tuf3i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5olkb"]
+radius = 16.0
+height = 48.0
+
+[node name="Warrior" type="CharacterBody2D"]
+script = ExtResource("1_t85ht")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5olkb")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("1_tuf3i")
+animation = &"move"
+autoplay = "idle"
+offset = Vector2(0, -8)

@@ -1,0 +1,5 @@
+res://Scenes/main.tscn
+res://Ressources/World/grass_tile_set.tres
+res://Ressources/Characters/warrior_sprite_frames.tres
+res://Scenes/Characters/warrior.gd
+res://Scenes/Characters/warrior.tscn
