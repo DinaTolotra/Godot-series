@@ -1,0 +1,9 @@
+res://Scenes/world.tscn
+res://Ressources/block_tile_set.tres
+res://Scenes/power_up.tscn
+res://Scenes/game.tscn
+res://Ressources/knight_sprite_frames.tres
+res://Scenes/knight.tscn
+res://Scenes/power_up.gd
+res://Scenes/fruit.tscn
+res://Scenes/fruit.gd

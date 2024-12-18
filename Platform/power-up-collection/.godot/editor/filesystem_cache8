@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1734537950
+icon.svg::CompressedTexture2D::3366098845016861693::1734537696::1734537704::1::::<><>::
+::res://License/::1734537716
+LICENSE & CREDITS.txt::TextFile::-1::1713558094::0::1::::<><>::
+::res://Ressources/::1734537884
+block_tile_set.tres::TileSet::3485301904373265950::1734537732::0::1::::<><>::uid://cxhf446wcsavp::::res://Sprites/world_tileset.png
+knight_sprite_frames.tres::SpriteFrames::8488305287728163636::1734537884::0::1::::<><>::uid://buhxm0bvjanns::::res://Sprites/knight.png
+::res://Scenes/::1734538256
+game.tscn::PackedScene::3950231224609700064::1734538245::0::1::::<><>::uid://c30ngpv8xevso::::res://Scenes/knight.tscn<>uid://c46lofd2ygvyc::::res://Scenes/world.tscn<>uid://coxlsrbrc7hp2::::res://Scenes/power_up.tscn
+knight.gd::GDScript::-1::1734421688::0::1::::<>CharacterBody2D<>::
+knight.tscn::PackedScene::6790539290593428406::1734538245::0::1::::<><>::res://Scenes/knight.gd<>uid://ds62fbak2kxma::::res://Ressources/knight_sprite_frames.tres
+power_up.tscn::PackedScene::5803666793090847669::1734538256::0::1::::<><>::res://Scenes/power_up.gd<>uid://cxhf446wcsavp::::res://Sprites/world_tileset.png
+power_up.gd::GDScript::-1::1734538024::0::1::::<>StaticBody2D<>::
+world.tscn::PackedScene::6873006699810347350::1734537732::0::1::::<><>::uid://bpwkobuxkfpna::::res://Ressources/block_tile_set.tres
+::res://Sprites/::1734538302
+fruit.png::CompressedTexture2D::5082697114820797118::1709913722::1734538303::1::::<><>::
+knight.png::CompressedTexture2D::3806067436687399024::1709911820::1734537718::1::::<><>::
+world_tileset.png::CompressedTexture2D::6401992360395490953::1709914336::1734537718::1::::<><>::

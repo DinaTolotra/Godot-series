@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxlsrbrc7hp2"]
+
+[ext_resource type="Script" path="res://Scenes/power_up.gd" id="1_6bh4s"]
+[ext_resource type="Texture2D" uid="uid://cxhf446wcsavp" path="res://Sprites/world_tileset.png" id="1_tqnwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j35un"]
+size = Vector2(16, 16)
+
+[node name="PowerUp" type="StaticBody2D"]
+script = ExtResource("1_6bh4s")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_tqnwc")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j35un")
+
+[node name="Ray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 9)

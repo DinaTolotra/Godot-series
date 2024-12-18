@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://depxwlxp3sfjy"]
+
+[ext_resource type="Texture2D" uid="uid://ceodjqnqolph3" path="res://Sprites/fruit.png" id="1_dag6d"]
+[ext_resource type="Script" path="res://Scenes/fruit.gd" id="1_sxnn0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rbknx"]
+bounce = 0.5
+absorbent = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qfofi"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b0poi"]
+radius = 8.0
+
+[node name="Fruit" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_rbknx")
+script = ExtResource("1_sxnn0")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_dag6d")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qfofi")
+
+[node name="PickArea" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="PickArea"]
+shape = SubResource("CircleShape2D_b0poi")
+
+[connection signal="body_entered" from="PickArea" to="." method="pick"]

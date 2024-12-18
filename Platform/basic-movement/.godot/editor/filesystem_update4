@@ -1,6 +1,5 @@
-res://Ressources/knight_sprite_frames.tres
 res://Scenes/knight.tscn
-res://Scenes/world.tscn
+res://Ressources/knight_sprite_frames.tres
 res://Ressources/block_tile_set.tres
+res://Scenes/world.tscn
 res://Scenes/game.tscn
-res://Scenes/knight.gd

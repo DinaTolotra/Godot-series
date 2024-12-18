@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwjry4gp1i065"]
+
+[ext_resource type="PackedScene" uid="uid://c30ngpv8xevso" path="res://Scenes/knight.tscn" id="1_3816m"]
+[ext_resource type="PackedScene" uid="uid://c46lofd2ygvyc" path="res://Scenes/world.tscn" id="2_fw7kh"]
+[ext_resource type="PackedScene" uid="uid://coxlsrbrc7hp2" path="res://Scenes/power_up.tscn" id="3_se73v"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Knight" parent="." instance=ExtResource("1_3816m")]
+position = Vector2(168, 72)
+
+[node name="Camera" type="Camera2D" parent="Knight"]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="World" parent="." instance=ExtResource("2_fw7kh")]
+
+[node name="PowerUp" parent="." instance=ExtResource("3_se73v")]
+position = Vector2(392, 120)
