@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://pbyprj2up3ai"]
+
+[ext_resource type="Texture2D" uid="uid://bqh7lbhbdap6i" path="res://Assets/UI/BuffIcons_16x16.png" id="1_ekv4k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78i7s"]
+atlas = ExtResource("1_ekv4k")
+region = Rect2(49, 2, 14, 12)
+
+[node name="Heart" type="TextureRect"]
+texture = SubResource("AtlasTexture_78i7s")
+stretch_mode = 2

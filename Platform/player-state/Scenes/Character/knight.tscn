@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://qiac232ejdyj"]
+
+[ext_resource type="Script" path="res://Scenes/Character/knight.gd" id="1_3ox5u"]
+[ext_resource type="PackedScene" uid="uid://clnv5jctbwotg" path="res://Scenes/Character/mob.tscn" id="1_ynbwd"]
+[ext_resource type="SpriteFrames" uid="uid://4t2ewxyh7mle" path="res://Ressources/Character/knight_sprite_frames.tres" id="2_6nk34"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lso0o"]
+radius = 8.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4mit"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8quy8"]
+radius = 16.0
+
+[node name="Knight" instance=ExtResource("1_ynbwd")]
+script = ExtResource("1_3ox5u")
+speed = 150.0
+
+[node name="Sprite" parent="." index="0"]
+sprite_frames = ExtResource("2_6nk34")
+animation = &"damage"
+
+[node name="Shape" parent="." index="1"]
+position = Vector2(0, 20)
+shape = SubResource("CapsuleShape2D_lso0o")
+
+[node name="RightHitBox" parent="." index="2"]
+position = Vector2(32, 24)
+hit_time = 0.2
+
+[node name="Shape" parent="RightHitBox" index="1"]
+shape = SubResource("CircleShape2D_t4mit")
+
+[node name="LeftHitBox" parent="." index="3"]
+position = Vector2(-32, 24)
+hit_time = 0.2
+
+[node name="Shape" parent="LeftHitBox" index="1"]
+shape = SubResource("CircleShape2D_8quy8")
+
+[node name="Ray" type="RayCast2D" parent="." index="4"]
+position = Vector2(0, 20)
+target_position = Vector2(0, 128)

@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="Platform: power up collection"
+config/tags=PackedStringArray("platform")
 run/main_scene="res://Scenes/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("platform")
 
 [input]
 

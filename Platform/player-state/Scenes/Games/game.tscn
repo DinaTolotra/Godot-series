@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://0sxtc33xk8sv"]
+
+[ext_resource type="PackedScene" uid="uid://cp3nfd58yl18d" path="res://Scenes/World/world.tscn" id="1_jvrio"]
+[ext_resource type="Script" path="res://Scenes/Games/game.gd" id="1_mrabu"]
+[ext_resource type="PackedScene" uid="uid://qiac232ejdyj" path="res://Scenes/Character/knight.tscn" id="2_cqjhg"]
+[ext_resource type="PackedScene" uid="uid://ct56xcgq06fwq" path="res://Scenes/Games/background.tscn" id="3_qluhv"]
+[ext_resource type="PackedScene" uid="uid://dq7mmw8j7n7uu" path="res://Scenes/UI/hud.tscn" id="4_nvudi"]
+[ext_resource type="PackedScene" uid="uid://c76kpyt7rgtp2" path="res://Scenes/Character/skull.tscn" id="5_h0uda"]
+[ext_resource type="PackedScene" uid="uid://bjefd0cpcuun" path="res://Scenes/World/statue.tscn" id="7_tvbsh"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_mrabu")
+
+[node name="Background" parent="." instance=ExtResource("3_qluhv")]
+
+[node name="HUD" parent="." instance=ExtResource("4_nvudi")]
+
+[node name="Statue" parent="." instance=ExtResource("7_tvbsh")]
+position = Vector2(128, 320)
+
+[node name="Knight" parent="." instance=ExtResource("2_cqjhg")]
+position = Vector2(120, 72)
+
+[node name="Camera" type="Camera2D" parent="Knight"]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+
+[node name="Skull" parent="." instance=ExtResource("5_h0uda")]
+position = Vector2(384, 312)
+
+[node name="World" parent="." instance=ExtResource("1_jvrio")]
+
+[node name="Modulator" type="CanvasModulate" parent="."]
+visibility_layer = 1048575
+
+[connection signal="heart_count_changed" from="Knight" to="." method="heart_changed"]
+[connection signal="heart_count_changed" from="Knight" to="HUD" method="set_heart_count"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://c76kpyt7rgtp2"]
+
+[ext_resource type="PackedScene" uid="uid://clnv5jctbwotg" path="res://Scenes/Character/mob.tscn" id="1_mxau3"]
+[ext_resource type="Script" path="res://Scenes/Character/skull.gd" id="1_nkal4"]
+[ext_resource type="SpriteFrames" uid="uid://dkkbug35ye0xb" path="res://Ressources/Character/skull_sprite_frames.tres" id="2_cknqw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vxnyu"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poam8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1kvmh"]
+
+[node name="Skull" instance=ExtResource("1_mxau3")]
+script = ExtResource("1_nkal4")
+
+[node name="Sprite" parent="." index="0"]
+sprite_frames = ExtResource("2_cknqw")
+animation = &"damage"
+
+[node name="Shape" parent="." index="1"]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_vxnyu")
+
+[node name="Shape" parent="RightHitBox" index="1"]
+position = Vector2(20, 12)
+shape = SubResource("CircleShape2D_poam8")
+
+[node name="Shape" parent="LeftHitBox" index="1"]
+position = Vector2(-20, 12)
+shape = SubResource("CircleShape2D_1kvmh")
+
+[node name="LOS" type="RayCast2D" parent="." index="4"]
+position = Vector2(0, 12)
+target_position = Vector2(28, 0)
+
+[node name="DownwardRay" type="RayCast2D" parent="." index="5"]
+position = Vector2(12, 24)
+target_position = Vector2(0, 12)
