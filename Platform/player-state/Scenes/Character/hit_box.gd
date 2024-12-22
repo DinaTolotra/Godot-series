@@ -28,6 +28,8 @@ func damage() -> void:
 	if wait_before_damage:
 		hit_timer.start()
 		await hit_timer.timeout
+	# check if the mob still want to damage
+	if not can_damage: return
 	for body in body_list:
 		if body.has_method("take_damage"):
 			body.take_damage()

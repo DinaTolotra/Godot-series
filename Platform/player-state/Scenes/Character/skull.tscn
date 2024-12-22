@@ -16,6 +16,7 @@ height = 24.0
 script = ExtResource("1_nkal4")
 
 [node name="Sprite" parent="." index="0"]
+position = Vector2(0, 2)
 sprite_frames = ExtResource("2_cknqw")
 animation = &"damage"
 

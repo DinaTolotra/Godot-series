@@ -31,6 +31,8 @@ func heal() -> void:
 func die() -> void:
 	sprite.play("die")
 	shape.disabled = true
+	left_hit.disable()
+	right_hit.disable()
 	set_physics_process(false)
 	await sprite.animation_finished
 	var tween = create_tween()
