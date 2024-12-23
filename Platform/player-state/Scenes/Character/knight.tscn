@@ -15,12 +15,13 @@ radius = 16.0
 radius = 16.0
 
 [node name="Knight" instance=ExtResource("1_ynbwd")]
+collision_mask = 6
 script = ExtResource("1_3ox5u")
 speed = 150.0
 
 [node name="Sprite" parent="." index="0"]
 sprite_frames = ExtResource("2_6nk34")
-animation = &"damage"
+animation = &"attack"
 
 [node name="Shape" parent="." index="1"]
 position = Vector2(0, 20)
@@ -28,14 +29,18 @@ shape = SubResource("CapsuleShape2D_lso0o")
 
 [node name="RightHitBox" parent="." index="2"]
 position = Vector2(32, 24)
-hit_time = 0.2
+collision_layer = 0
+collision_mask = 2
+hit_time = 0.1
 
 [node name="Shape" parent="RightHitBox" index="1"]
 shape = SubResource("CircleShape2D_t4mit")
 
 [node name="LeftHitBox" parent="." index="3"]
 position = Vector2(-32, 24)
-hit_time = 0.2
+collision_layer = 0
+collision_mask = 2
+hit_time = 0.1
 
 [node name="Shape" parent="LeftHitBox" index="1"]
 shape = SubResource("CircleShape2D_8quy8")
@@ -43,3 +48,4 @@ shape = SubResource("CircleShape2D_8quy8")
 [node name="Ray" type="RayCast2D" parent="." index="4"]
 position = Vector2(0, 20)
 target_position = Vector2(0, 128)
+collision_mask = 4

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2xxcx4q41txh"]
+
+[ext_resource type="Script" path="res://Scenes/Construction/construction.gd" id="1_hniwx"]
+[ext_resource type="Texture2D" uid="uid://brldaloq7prem" path="res://Assets/Construction/Tower.png" id="2_8b0re"]
+[ext_resource type="PackedScene" uid="uid://bm8bwhysrbj2u" path="res://Scenes/Construction/tower_visual_model.tscn" id="2_f801x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir2ee"]
+size = Vector2(32, 32)
+
+[node name="Tower" type="StaticBody2D"]
+script = ExtResource("1_hniwx")
+size = Vector2i(32, 32)
+visual_model = ExtResource("2_f801x")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_ir2ee")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_8b0re")
+centered = false

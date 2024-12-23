@@ -9,6 +9,10 @@ extends Area2D
 var body_list : Dictionary
 var wait_before_damage = true
 
+func set_enabled(enabled: bool) -> void:
+	if enabled: enable()
+	else: disable()
+
 func disable() -> void:
 	can_damage = false
 	shape.disabled = true
@@ -29,8 +33,8 @@ func damage() -> void:
 		hit_timer.start()
 		await hit_timer.timeout
 	# check if the mob still want to damage
-	if not can_damage: return
 	for body in body_list:
+		if not can_damage: return
 		if body.has_method("take_damage"):
 			body.take_damage()
 

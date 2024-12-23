@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://biayydndahp7i"]
+
+[ext_resource type="PackedScene" uid="uid://braf6dabq2cm4" path="res://Scenes/World/world.tscn" id="1_rx08w"]
+[ext_resource type="Script" path="res://Scenes/Game/game.gd" id="1_wx7m2"]
+[ext_resource type="PackedScene" uid="uid://c8gu768hnwnsd" path="res://Scenes/UI/hud.tscn" id="3_l60jf"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_wx7m2")
+
+[node name="World" parent="." instance=ExtResource("1_rx08w")]
+position = Vector2(0, -1)
+
+[node name="HUD" parent="." instance=ExtResource("3_l60jf")]
+
+[connection signal="construct" from="HUD" to="." method="focus_on_construction"]

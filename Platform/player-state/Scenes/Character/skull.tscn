@@ -1,19 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://c76kpyt7rgtp2"]
+[gd_scene load_steps=9 format=3 uid="uid://c76kpyt7rgtp2"]
 
 [ext_resource type="PackedScene" uid="uid://clnv5jctbwotg" path="res://Scenes/Character/mob.tscn" id="1_mxau3"]
 [ext_resource type="Script" path="res://Scenes/Character/skull.gd" id="1_nkal4"]
 [ext_resource type="SpriteFrames" uid="uid://dkkbug35ye0xb" path="res://Ressources/Character/skull_sprite_frames.tres" id="2_cknqw"]
+[ext_resource type="Script" path="res://Scenes/Character/detection_area.gd" id="4_ewlm7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vxnyu"]
 radius = 8.0
 height = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_poam8"]
+radius = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1kvmh"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epnyw"]
+radius = 96.0
 
 [node name="Skull" instance=ExtResource("1_mxau3")]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_nkal4")
+max_heart = 2
 
 [node name="Sprite" parent="." index="0"]
 position = Vector2(0, 2)
@@ -28,14 +37,26 @@ shape = SubResource("CapsuleShape2D_vxnyu")
 position = Vector2(20, 12)
 shape = SubResource("CircleShape2D_poam8")
 
+[node name="LeftHitBox" parent="." index="3"]
+can_damage = true
+
 [node name="Shape" parent="LeftHitBox" index="1"]
 position = Vector2(-20, 12)
 shape = SubResource("CircleShape2D_1kvmh")
 
 [node name="LOS" type="RayCast2D" parent="." index="4"]
 position = Vector2(0, 12)
-target_position = Vector2(28, 0)
+target_position = Vector2(32, 0)
+collision_mask = 5
 
-[node name="DownwardRay" type="RayCast2D" parent="." index="5"]
-position = Vector2(12, 24)
-target_position = Vector2(0, 12)
+[node name="DetectionArea" type="Area2D" parent="." index="5"]
+collision_layer = 0
+script = ExtResource("4_ewlm7")
+
+[node name="Shape" type="CollisionShape2D" parent="DetectionArea" index="0"]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_epnyw")
+debug_color = Color(0.760784, 0.764706, 0, 0.0862745)
+
+[connection signal="body_entered" from="DetectionArea" to="DetectionArea" method="add_to_list"]
+[connection signal="body_exited" from="DetectionArea" to="DetectionArea" method="remove_to_list"]

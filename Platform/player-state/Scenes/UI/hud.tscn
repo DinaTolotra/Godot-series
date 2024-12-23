@@ -15,5 +15,7 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="HeartContainer" type="HBoxContainer" parent="MainContainer"]
+[node name="HeartContainer" type="FlowContainer" parent="MainContainer"]
 layout_mode = 2
+last_wrap_alignment = 1
+vertical = true

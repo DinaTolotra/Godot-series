@@ -1,7 +1,3 @@
-res://Scenes/Character/knight.tscn
+res://Scenes/Character/skull.tscn
 res://Ressources/Character/knight_sprite_frames.tres
 res://Ressources/Character/skull_sprite_frames.tres
-res://Scenes/Games/game.tscn
-res://Scenes/Character/skull.tscn
-res://Scenes/Character/hit_box.gd
-res://Scenes/Character/mob.gd

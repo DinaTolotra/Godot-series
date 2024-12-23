@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm8bwhysrbj2u"]
+
+[ext_resource type="Texture2D" uid="uid://brldaloq7prem" path="res://Assets/Construction/Tower.png" id="1_c12b8"]
+
+[node name="TowerVisualModel" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.501961)
+texture = ExtResource("1_c12b8")
+centered = false

@@ -12,6 +12,8 @@ func take_damage() -> void:
 func get_user_control() -> void:
 	if freeze or not is_on_floor(): return
 	dir = Input.get_axis("move_left", "move_right")
+	if dir < 0: _look_at_left()
+	elif dir > 0: _look_at_right()
 	if Input.is_action_just_pressed("jump"): _jump()
 	_move()
 	if Input.is_action_just_pressed("attack"):  _attack()
@@ -22,10 +24,6 @@ func update_display() -> void:
 			sprite.play("move")
 		else:
 			sprite.play("idle")
-		if velocity.x > 0:
-			_look_at_right()
-		elif velocity.x < 0:
-			_look_at_left()
 	if velocity.y < 0 and not freeze:
 		sprite.play("jump")
 	elif velocity.y > 0 and not freeze:
@@ -38,6 +36,7 @@ func update_display() -> void:
 
 
 func _ready() -> void:
+	super._ready()
 	heart_count_changed.emit(heart, heart)
 
 func _physics_process(delta: float) -> void:

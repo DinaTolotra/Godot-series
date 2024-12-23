@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://brnjslaxcp0qb"]
+
+[ext_resource type="Texture2D" uid="uid://qt63vgqrco0y" path="res://Assets/Construction/House.png" id="1_yi0ac"]
+
+[node name="HouseVisualModel" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.501961)
+texture = ExtResource("1_yi0ac")
+centered = false

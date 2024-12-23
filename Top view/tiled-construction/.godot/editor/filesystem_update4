@@ -1,0 +1,11 @@
+res://Scenes/UI/hud.tscn
+res://Scenes/Construction/house.tscn
+res://Scenes/Construction/house_visual_model.tscn
+res://Scenes/Game/game.tscn
+res://Scenes/World/world.tscn
+res://Scenes/Game/game.gd
+res://Scenes/Construction/tower.tscn
+res://Scenes/World/world.gd
+res://Scenes/Construction/construction_list.gd
+res://Scenes/Construction/construction.gd
+res://Scenes/UI/hud.gd
