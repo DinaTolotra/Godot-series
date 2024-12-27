@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734915135
+::res://::1735099681
 icon.svg::CompressedTexture2D::4828068969974371052::1734719845::1734719854::1::::<><>::
 ::res://Assets/::1734720092
 ::res://Assets/Character/::1734764649
@@ -23,12 +23,12 @@ grave.png::CompressedTexture2D::7513579716018127818::1734895186::1734895289::1::
 Heal.png::CompressedTexture2D::6370068591790002950::1734763314::1734763345::1::::<><>::
 oak_woods_tileset.png::CompressedTexture2D::7800785864128196761::1575139176::1734720101::1::::<><>::
 ::res://Ressources/::1734893602
-::res://Ressources/Character/::1734895703
-knight_sprite_frames.tres::SpriteFrames::2076347336955670234::1734894660::0::1::::<><>::uid://b0wrktdjbba4o::::res://Assets/Character/Knight/_Attack.png<>uid://c5gqo22v10ftk::::res://Assets/Character/Knight/_Death.png<>uid://d05m4lbkppbak::::res://Assets/Character/Knight/_Hit.png<>uid://cafx4k6ivppqs::::res://Assets/Character/Knight/_Fall.png<>uid://coes172yp21if::::res://Assets/Character/Knight/_Idle.png<>uid://c0gic2i7xsxpe::::res://Assets/Character/Knight/_Jump.png<>uid://c1a4gc66yqiqm::::res://Assets/Character/Knight/_Run.png
-skull_sprite_frames.tres::SpriteFrames::7881891057661035347::1734895703::0::1::::<><>::uid://d4fovqj4sjv0h::::res://Assets/Character/skull.png
+::res://Ressources/Character/::1734915168
+knight_sprite_frames.tres::SpriteFrames::2076347336955670234::1734915168::0::1::::<><>::uid://b0wrktdjbba4o::::res://Assets/Character/Knight/_Attack.png<>uid://c5gqo22v10ftk::::res://Assets/Character/Knight/_Death.png<>uid://d05m4lbkppbak::::res://Assets/Character/Knight/_Hit.png<>uid://cafx4k6ivppqs::::res://Assets/Character/Knight/_Fall.png<>uid://coes172yp21if::::res://Assets/Character/Knight/_Idle.png<>uid://c0gic2i7xsxpe::::res://Assets/Character/Knight/_Jump.png<>uid://c1a4gc66yqiqm::::res://Assets/Character/Knight/_Run.png
+skull_sprite_frames.tres::SpriteFrames::7881891057661035347::1734915168::0::1::::<><>::uid://d4fovqj4sjv0h::::res://Assets/Character/skull.png
 ::res://Ressources/World/::1734893685
 ::res://Scenes/::1734723221
-::res://Scenes/Character/::1734899997
+::res://Scenes/Character/::1734915168
 detection_area.gd::GDScript::-1::1734888619::0::1::::<>Area2D<>::
 hit_box.gd::GDScript::-1::1734889706::0::1::::<>Area2D<>::
 hit_box.tscn::PackedScene::7868733106905659136::1734889706::0::1::::<><>::res://Scenes/Character/hit_box.gd
@@ -37,7 +37,7 @@ knight.tscn::PackedScene::1139541554446243501::1734895000::0::1::::<><>::res://S
 mob.gd::GDScript::-1::1734897893::0::1::::Mob<>CharacterBody2D<>::
 mob.tscn::PackedScene::5573084665537829092::1734748776::0::1::::<><>::res://Scenes/Character/mob.gd<>uid://dkdw5cvw365y7::::res://Scenes/Character/hit_box.tscn
 skull.gd::GDScript::-1::1734896698::0::1::::<>Mob<>::
-skull.tscn::PackedScene::7083515322403926501::1734899997::0::1::::<><>::uid://clnv5jctbwotg::::res://Scenes/Character/mob.tscn<>res://Scenes/Character/skull.gd<>uid://dkkbug35ye0xb::::res://Ressources/Character/skull_sprite_frames.tres<>res://Scenes/Character/detection_area.gd
+skull.tscn::PackedScene::7083515322403926501::1734915168::0::1::::<><>::uid://clnv5jctbwotg::::res://Scenes/Character/mob.tscn<>res://Scenes/Character/skull.gd<>uid://dkkbug35ye0xb::::res://Ressources/Character/skull_sprite_frames.tres<>res://Scenes/Character/detection_area.gd
 ::res://Scenes/Games/::1734899937
 background.tscn::PackedScene::6170284144243310616::1734763095::0::1::::<><>::uid://b6ay6xhkbbgh4::::res://Assets/World/background_layer_1.png<>uid://ndviptvj6eqw::::res://Assets/World/background_layer_2.png<>uid://dxj0wu8npadkn::::res://Assets/World/background_layer_3.png
 game.gd::GDScript::-1::1734762154::0::1::::<>Node2D<>::
